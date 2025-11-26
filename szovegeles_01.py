@@ -47,14 +47,19 @@ try:
         #print(szoveg)
 except IOError as ex:
     print(ex)
+    
+#3. feladat
+szoveg=szoveg.replace(".", "").replace(",", "").replace("*", "")
+print(szoveg)
 
-'''
-szoveg_kis = szoveg.lower()
+lista=szoveg.strip().split(' ')
+print(lista)
 
-for i in range(len(szoveg_kis)):
-    if ():
-'''
-
+try:
+    with open("scifi_output.txt","a",encoding = 'utf-8')as fajl:
+        fajl.write(str(len(lista)) + "\n") 
+except IOError as ex:
+    print(ex)
 
 
 
