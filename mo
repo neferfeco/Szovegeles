@@ -1,13 +1,17 @@
 1.
-print("---MO---")
-lista2 =  []
 lista = szoveg.split('**')
 
+i = 0
 for sor in lista:
     if len(sor) > 0:
-        lista2.append(sor.strip('**').strip())
+        lista[i] = sor.strip()
+        i += 1
 
-for sor in lista2:
+if i < len(lista):
+    for j in range(i, len(lista)):
+        lista.pop()
+
+for sor in lista:
     print(f"--{sor}--")
 
 
