@@ -61,11 +61,30 @@ try:
 except IOError as ex:
     print(ex)
 
+#4. feladat
+aslista = []
 
+for elem in lista:
+    if elem.lower().endswith("és") and elem not in aslista:
+        aslista.append(elem)
+print(aslista)
 
+try:
+    with open("scifi_output.txt","a",encoding = 'utf-8')as fajl:
+        
+        for elem in aslista:
+            fajl.write(elem+"\n")
+        
+except IOError as ex:
+    print(ex)
 
+#5. feladat
+alista = []
 
-
+for elem in lista:
+    if elem.lower().startswith("a") and (elem.lower() not in ["a","az"]):
+        alista.append(elem)
+print(len(alista))
 
 
 
