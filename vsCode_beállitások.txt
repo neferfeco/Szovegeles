@@ -1,0 +1,18 @@
+Kijelölés NE legyen automatikus másolás
+    Settings / Text Editor / Empty Selection Clipboard: nincs pipa
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,12 @@
+Ctrl + Shift + P (Command Palette)
+
+GitHub Copilot beépített javaslatainak tiltása
+    GitHub Copilot: Disable Inline Suggestions
+
+GitHub Copilot beépített javaslatainak engedélyezése
+    GitHub Copilot: Enable Inline Suggestions
+
+
+
+
+
