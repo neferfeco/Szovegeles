@@ -35,7 +35,7 @@ for i in betu:
 
 try:
     with open("string_output.txt","a",encoding = 'utf-8')as fajl:
-        for i in len(speclista):
+        for i  in range (len(speclista)):
             if i<len(speclista)-1 :
                 fajl.write(speclista[i] + ", ")
             else:
