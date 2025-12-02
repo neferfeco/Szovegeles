@@ -23,8 +23,14 @@ for i in  betu:
     if i in string.ascii_letters:
         db_betu += 1
 
-
-
 print (db_szam)
 
 print (db_betu)
+
+
+
+
+
+
+
+
