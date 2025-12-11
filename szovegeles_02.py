@@ -26,7 +26,7 @@ for i in  betu:
 print (db_szam)
 
 print (db_betu)
-#3. feladat
+# 3. feladat
 speclista=[]
 
 for i in betu:
@@ -44,6 +44,18 @@ except IOError as ex:
     print(ex)
 
 
+# 4.feladat
+
+szavak = betu.split('\n' and ' ')
 
 
+for szo in szavak:
+    if ("A" or '5' or '3' or 'b' or '?') in szo:
+        i = 0
+        while i < len(szo) and szo[i] in string.hexdigits:
+            i += 1
+        if i == len(szo):
+            print("megvan",szo)  
+            
+ 
 
