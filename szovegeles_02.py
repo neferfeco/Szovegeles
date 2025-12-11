@@ -46,7 +46,14 @@ except IOError as ex:
 
 # 4.feladat
 
-szavak = betu.split('\n' and ' ')
+sorok = betu.split('\n')
+szavak = []
+
+for sor in sorok:
+    sor_darabok = sor.split(' ')
+    
+    for s in sor_darabok:
+        szavak.append(s)
 
 
 for szo in szavak:
