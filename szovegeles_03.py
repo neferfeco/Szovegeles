@@ -1,8 +1,10 @@
 #1. feladat
 szoveg = ''
+
 try:
     with open ("input.txt", "r", encoding="utf-8") as file:
         szoveg = file.read()
+        
 except IOError as hiba:
     print(hiba)
 
@@ -19,6 +21,16 @@ def feladat1_2():
     szavak = szoveg.split(' ')
     
     return len(szavak)
+
+
+
+
+
+
+
+# ****************************
+#  A PROGRAM
+# ****************************
 
 try:
     with open ("output.txt", "w", encoding="utf-8") as file:
