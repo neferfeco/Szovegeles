@@ -1,0 +1,5 @@
+A mesterséges intelligencia (MI) és a kreativitás kapcsolata egyre égetőbb kérdés. Sokan azt hiszik, hogy az MI csak ismétli a mintákat, de a legújabb algoritmusok, mint például a GPT-4, már képesek olyan szövegeket, képeket és zenéket generálni, amelyek emberi alkotásoknak tűnnek. Ez a "generatív MI" valóban új dimenziókat nyit, de felveti az **eredetiség** és a **szerzőség** kérdéseit.
+
+Egy diák esszét írhat egy MI segítségével, de az vajon hiteles tudásnak számít? Vagy csak egy gondosan összerakott információs mozaik? A fiatal alkotók számára az MI egy **eszköz**, egy **katalizátor** lehet, ami felgyorsítja a prototípusok elkészítését. Például egy grafikus másodpercek alatt készíthet vázlatokat a Midjourney vagy a DALL-E segítségével. Azonban az emberi **kritikai gondolkodás** és az **érzelmi intelligencia** továbbra is elengedhetetlen a valódi **művészet** és az **innováció** megteremtéséhez.
+
+Fontos megérteni, hogy az MI nem helyettesíti a **képzelőerőt**, hanem **kiegészíti** azt. Az a diák, aki megtanulja hatékonyan használni ezeket a technológiákat, versenyelőnybe kerül. A jövő az **ember-MI kollaborációról** szól.
