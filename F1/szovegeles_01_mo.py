@@ -18,6 +18,7 @@ def adat_beolvasas_fajlbol():
 def feladat1():
     # A sorok_lista név globális változóként történő használatának lehetővé tétele (tartalmának módosíthatóságához)
     global sorok_lista
+    
     kiirando = ""
     
     # A beolvasott szöveg végéről az Enter eltávolítása (strip), majd a szöveg feldarabolása '**' karakterpáros mentén
@@ -73,7 +74,7 @@ def feladat2():
         sorok_lista[i] = uj_cim
 
     
-def feladat3():    
+def feladat3():   
     # A szoveg változóból eltávolítjuk először a '.'-okat, majd a ','-ket, végül a '*'-okat
     szoveg2 = szoveg.replace(".", "").replace(",", "").replace(":", "").replace("*", "")
     
@@ -83,20 +84,57 @@ def feladat3():
     return szo_lista
 
 
-def feladat4():
-    pass
+def feladat4():    
+    # 'és'-ra végződő szavak kigyűjtésére szolgáló lista létrehozása
+    es_lista = []
+
+    szo_lista = feladat3()
+    
+    # 'és'-re végződő szavak kigyűjtése. Mivel írásmódtól függetlenül keressük ezeket a szavakat, ezért előtte egységesen kisbetűs írásmódúra változtatjuk őket
+    for szo in szo_lista:
+        if szo.lower().endswith("és") and szo not in es_lista:
+            es_lista.append(szo)
+    
+    return es_lista
 
 
 def feladat5():
-    pass
+    # Az 'a'-val kezdődő szavak kigyűjtésére szolgáló lista létrehozása
+    a_lista = []
+
+    szo_lista = feladat3()
+
+    # 'a'-val kezdődő szavak kigyűjtése. Mivel írásmódtól függetlenül keressük ezeket a szavakat, ezért előtte egységesen kisbetűs írásmódúra változtatjuk őket, valamint kizárjuk a névelőket
+    for szo in szo_lista:
+        if szo.lower().startswith("a") and (szo.lower() not in ["a", "az"]):
+            a_lista.append(szo)
+    
+    #print(a_lista)
+    return a_lista
 
 
-def feladat6():
-    pass
+def feladat6():    
+    return szoveg.find("jövőben")
 
 
 def feladat7():
-    pass
+    # A legalább 10 karakter hosszú szavak kigyűjtésére szolgáló lista létrehozása
+    hosszu_lista = []
+
+    szo_lista = feladat3()
+
+    for szo in szo_lista:
+        # A szavak kisbetűssé alakítása, hogy elkerüljük a különböző írásmódú azonos szavak kigyűjtését és mert a rendezés csak így lesz helyes
+        szo = szo.lower()
+        
+        # A 10 karakternél hosszabb és még nem kigyűjtött szó kigyűjtése
+        if len(szo)>=10 and szo not in hosszu_lista:
+            hosszu_lista.append(szo)
+
+    # A kigyűjtött szavakat tartalmazó lista rendezése
+    hosszu_lista.sort()
+    
+    return hosszu_lista
 
 
 
@@ -138,12 +176,28 @@ try:
         fajl.write(f"3. feladat:\n\tA szöveg {len(feladat3())} szóból áll.\n\n")
         
         # 4. feladat
+        fajl.write(f"4. feladat:\n")
+        
+        lista = feladat4()
+                
+        for es_szo in lista:
+            fajl.write(f"\t{es_szo}\n")
+
+        fajl.write(f"\n")
 
         # 5. feladat
+        fajl.write(f"5. feladat:\n\t'a' betűvel kezdődő szavak száma: {len(feladat5())}\n\n")
 
         # 6. feladat
+        fajl.write(f"6. feladat:\n\tA 'jövőben' szó a {feladat6()}. pozíciótól kezdve fordul elő először a szövegben.\n\n")
 
         # 7. feladat
+        fajl.write(f"7. feladat:\n")
+        
+        lista = feladat7()
+        
+        for hosszu_szo in lista:
+            fajl.write(f"\t{hosszu_szo}\n")
         
 except IOError as ex:
     print(ex)
@@ -155,59 +209,3 @@ except IOError as ex:
 #################################################
 
 
-
-"""
-#4. feladat
-aslista = []
-
-for elem in sorok_lista:
-    if elem.lower().endswith("és") and elem not in aslista:
-        aslista.append(elem)
-print(aslista)
-
-try:
-    with open("scifi_output.txt","a",encoding = 'utf-8')as fajl:
-        
-        for elem in aslista:
-            fajl.write(elem+"\n")
-        
-except IOError as ex:
-    print(ex)
-
-
-#5. feladat
-alista = []
-
-for elem in sorok_lista:
-    if elem.lower().startswith("a") and (elem.lower() not in ["a","az"]):
-        alista.append(elem)
-print(len(alista))
-
-
-#6. feladat
-try:
-    with open("scifi_output.txt","a",encoding = 'utf-8')as fajl:
-        fajl.write(str(szoveg.find("jövőben")) + "\n")
-except IOError as ex:
-    print(ex)
-    
-    
-#7.feladat
-hosszulista = []
-
-for elem in sorok_lista:
-    elem=elem.lower()
-    if len(elem)>=10 and elem not in hosszulista:
-        hosszulista.append(elem)
-hosszulista.sort()
-print(hosszulista)
-
-try:
-    with open("output.txt","w",encoding = 'utf-8')as fajl:
-        
-        for elem in hosszulista:
-            fajl.write(elem+"\n")
-        
-except IOError as ex:
-    print(ex)
-"""
