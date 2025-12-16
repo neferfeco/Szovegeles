@@ -36,7 +36,7 @@ def feladat1():
             db += 1
     
     # A lista végéről eltávolítjuk a felesleges elemeket
-    for i in range(db,len(sorok_lista)):
+    for i in range(db, len(sorok_lista)):
         sorok_lista.pop()
     
     # A fájlba írandó sor a 4. listaelem
@@ -84,7 +84,15 @@ def feladat3():
 
 
 def feladat4():
-    pass
+    szo_lista = feladat3()
+    aslista = []
+
+    for elem in szo_lista:
+        if elem.lower().endswith("és") and elem not in aslista:
+            aslista.append(elem)
+    print(aslista)
+
+    return aslista
 
 
 def feladat5():
@@ -138,7 +146,12 @@ try:
         fajl.write(f"3. feladat:\n\tA szöveg {len(feladat3())} szóból áll.\n\n")
         
         # 4. feladat
-
+        fajl.write(f"4. feladat:\n")
+        lista = feladat4()
+        
+        for szo in lista:
+            fajl.write(f"\t{szo}\n")
+        
         # 5. feladat
 
         # 6. feladat
@@ -157,24 +170,6 @@ except IOError as ex:
 
 
 """
-#4. feladat
-aslista = []
-
-for elem in sorok_lista:
-    if elem.lower().endswith("és") and elem not in aslista:
-        aslista.append(elem)
-print(aslista)
-
-try:
-    with open("scifi_output.txt","a",encoding = 'utf-8')as fajl:
-        
-        for elem in aslista:
-            fajl.write(elem+"\n")
-        
-except IOError as ex:
-    print(ex)
-
-
 #5. feladat
 alista = []
 

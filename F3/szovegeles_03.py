@@ -1,8 +1,9 @@
 #1. feladat
+import string
 szoveg = ''
 
 try:
-    with open ("input.txt", "r", encoding="utf-8") as file:
+    with open ("F3//input.txt", "r", encoding="utf-8") as file:
         szoveg = file.read()
         
 except IOError as hiba:
@@ -22,9 +23,17 @@ def feladat1_2():
     
     return len(szavak)
 
+def feladat2():
+    kisbetus = szoveg.lower()
+    
+    for i in kisbetus:
+        if i in string.punctuation:
+            kisbetus = kisbetus.replace(i,"")
+    
+    return kisbetus
 
-
-
+def feladat3():
+    
 
 
 
@@ -39,7 +48,7 @@ try:
 except IOError as hiba:
     print(hiba)
     
-
+print(feladat2())
 
 
 
