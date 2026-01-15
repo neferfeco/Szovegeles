@@ -1,3 +1,6 @@
-1.feladat: 1136    
-1_2. feladat: 153    
-4 feladat: ['intelligencia', 'például', 'segítségével']   
+1.feladat: 1136
+1_2. feladat: 153
+4 feladat: ['intelligencia', 'például', 'segítségével']
+7* fordul elő a szövegben az MI szó.
+A leghosszabb mondat:
+	Sokan azt hiszik, hogy az Mesterséges Intelligencia csak ismétli a mintákat, de a legújabb algoritmusok, mint például a GPT-4, már képesek olyan szövegeket, képeket és zenéket generálni, amelyek emberi alkotásoknak tűnnek.
