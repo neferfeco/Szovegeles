@@ -1,2 +1,3 @@
 1.feladat: 1136    
 1_2. feladat: 153    
+4 feladat: ['intelligencia', 'például', 'segítségével']   
